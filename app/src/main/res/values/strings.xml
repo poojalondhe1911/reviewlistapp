@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Review List</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="review_details">Review Details</string>
+    <string name="reviewed_by">Reviewed By :</string>
+    <string name="exciting_part">Exciting Part :</string>
+    <string name="travel_type">Travel Type :</string>
+    <string name="no_information">Information not available</string>
+</resources>

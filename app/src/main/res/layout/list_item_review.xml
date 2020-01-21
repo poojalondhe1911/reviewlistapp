@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:elevation="@dimen/margin_sixteen_dp"
+    android:layout_margin="@dimen/margin_eight_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin_eight_dp"
+        android:paddingBottom="@dimen/margin_eight_dp">
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/margin_eight_dp"
+            android:layout_marginTop="@dimen/margin_sixteen_dp"
+            android:layout_marginEnd="@dimen/margin_eight_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:isIndicator="true"
+            />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/rating"
+            android:layout_marginTop="@dimen/margin_sixteen_dp"
+            android:layout_marginStart="@dimen/margin_eight_dp"
+            android:layout_marginEnd="@dimen/margin_eight_dp"
+            android:orientation="horizontal"
+            tool:text="Rating title"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/rating"
+            android:layout_marginStart="@dimen/margin_eight_dp"
+            android:layout_marginEnd="@dimen/margin_eight_dp"
+            android:layout_marginTop="@dimen/margin_four_dp"
+            android:orientation="horizontal"
+            android:textSize="@dimen/title_text_size"
+            android:textColor="@color/dark_text"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rating" />
+
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_four_dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/dark_text"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            android:layout_marginStart="@dimen/margin_eight_dp"
+            android:layout_marginEnd="@dimen/margin_eight_dp"
+            android:ellipsize="end"
+            android:maxLines="2"/>
+
+        <TextView
+            android:id="@+id/layoutProfile"
+            android:layout_width="@dimen/profile_size"
+            android:layout_height="@dimen/profile_size"
+            android:layout_marginEnd="@dimen/margin_eight_dp"
+            android:layout_marginStart="@dimen/margin_four_dp"
+            android:layout_marginTop="@dimen/margin_eight_dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size"
+            android:gravity="center"
+            android:background="@drawable/ic_filled_circle"
+            app:layout_constraintStart_toStartOf="@+id/rating"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+        <TextView
+            android:id="@+id/txtReviewedBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_eight_dp"
+            android:layout_marginStart="@dimen/margin_eight_dp"
+            android:layout_marginTop="@dimen/margin_eight_dp"
+            android:textColor="@color/dark_text"
+            android:textSize="@dimen/title_text_size"
+            android:text="@string/reviewed_by"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/layoutProfile"
+            app:layout_constraintTop_toBottomOf="@+id/txtDescription"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtAuthorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_eight_dp"
+            android:layout_marginStart="@dimen/margin_eight_dp"
+            android:layout_marginTop="@dimen/margin_four_dp"
+            android:textColor="@color/dark_text"
+            android:textSize="@dimen/title_text_size"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/layoutProfile"
+            app:layout_constraintTop_toBottomOf="@+id/txtReviewedBy" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
